@@ -99,50 +99,55 @@ body {
   gap: 70px;
   justify-content: space-between;
   margin-top: 48px;
-  background-color: #F2F2F2;
 }
 .toggle input {
   border: none;
   width: 480px;
   height: 56px;
+  padding: 10px 15px;
   border-radius: 5px;
-  --webkit-box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
   font-size: 14px;
   line-height: 20px;
   border-color: none;
 }
 .toggle .select {
-  padding: 10px 15px;
   color: #111517;
   width: 200px;
-  height: 56px;
-  --webkit-box-shadow: 0px 2px 9px rgb(0 0 0 / 5%);
+  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
-  border: none;
-  background-color: red;
+  align-items: center;
 }
-.toggle .select option {
+.toggle .select .drop {
+  padding: 10px 25px;
+  cursor: pointer;
+  position: relatifve;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.toggle .select .options {
+  display: none;
+  width: 200px;
+  overflow: hidden;
+  position: absolute;
+  margin-top: 25px;
+}
+.toggle .select .options p {
+  padding: 10px 25px;
   font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 19px;
   color: #111517;
-  padding: 40px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
-.toggle label {
-  position: relative;
-}
-.toggle label:before {
-  content: "";
-  position: absolute;
-  left: 30px;
-  top: 0;
-  bottom: 0;
-  width: 20px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25' fill-rule='evenodd'%3E%3Cpath d='M16.036 18.455l2.404-2.405 5.586 5.587-2.404 2.404zM8.5 2C12.1 2 15 4.9 15 8.5S12.1 15 8.5 15 2 12.1 2 8.5 4.9 2 8.5 2zm0-2C3.8 0 0 3.8 0 8.5S3.8 17 8.5 17 17 13.2 17 8.5 13.2 0 8.5 0zM15 16a1 1 0 1 1 2 0 1 1 0 1 1-2 0'%3E%3C/path%3E%3C/svg%3E") center/contain no-repeat;
-}
-.toggle input {
-  padding: 10px 70px;
+.toggle .select .show {
+  display: block;
+  background-color: white;
 }
 
 .wrapper {

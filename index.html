@@ -23,19 +23,25 @@
 			<label >
 				<input class="input" type="text" placeholder="Search for a country…">
 			</label>
-			<select name="select" class="select">
-				<option value="All">All</option>
-				<option value="Africa">Africa</option>
-				<option value="Americas">Americas</option>
-				<option value="Europe">Europe</option>
-				<option value="Asia">Asia</option>
-				<option value="Oceania">Oceania</option>
-				<option value="Antarctic">Antarctic</option>
-			</select>
+			<div class="select">
+				<div class="drop" onclick="showModal()" >
+					All
+				</div>
+				<div class="options">
+					<p>All</p>
+					<p>Asia</p>
+					<p>Antarctic</p>
+					<p>Europe</p>
+					<p>Americas</p>
+					<p>Oceania</p>
+					<p>Africa</p>
+				</div>
+			</div>
+
+			
 		</div>
 		<div class='wrapper'>
-
-        </div>
+		</div>
 
 		<script src="./js/main.js"></script>
 	</body>
